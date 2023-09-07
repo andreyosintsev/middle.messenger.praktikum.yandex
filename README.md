@@ -1,6 +1,6 @@
 # Вебчат - учебный проект middle.messenger.praktikum.yandex
 
-Ссылка на живое демо на Netlify: https://deploy--leafy-paletas-2c191e.netlify.app/
+Ссылка на живое демо на Netlify: https://leafy-paletas-2c191e.netlify.app
 Автоматический деплой производится из ветки deploy
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/92491a93-ed01-47e0-bab1-6a7a162a9e34/deploy-status)](https://app.netlify.com/sites/leafy-paletas-2c191e/deploys)
