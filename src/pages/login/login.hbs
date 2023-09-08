@@ -1,10 +1,12 @@
-<div class="popup popup_login">
-  <h2 class="popup__title">Вход</h2>
-  <form>
-    {{> Field title="Логин" name="login" type="text" value="Логин" error="Неверный логин"}}
-    {{> Field title="Пароль" name="password" type="password" value="Пароль" error="Неверный пароль"}}
-    {{> Spacer height="150"}}
-    {{> Button value="Войти"}}
-    {{> Link href="" text="Ещё не зарегистрированы?"}}
-  </form>
-</div>
+<main class="login-main">
+  <div class="popup popup_login">
+    <h2 class="popup__title">Вход</h2>
+      <form>
+        {{> Field title="Логин" name="login" type="text" value="Логин" error="Неверный логин"}}
+        {{> Field title="Пароль" name="password" type="password" value="Пароль" error="Неверный пароль"}}
+        {{> Spacer height="150"}}
+        {{> Button value="Войти"}}
+        {{> Link href="" text="Ещё не зарегистрированы?"}}
+      </form>
+  </div>
+</main>

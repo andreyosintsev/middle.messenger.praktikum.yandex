@@ -5,6 +5,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/92491a93-ed01-47e0-bab1-6a7a162a9e34/deploy-status)](https://app.netlify.com/sites/leafy-paletas-2c191e/deploys)
 
+https://leafy-paletas-2c191e.netlify.app
+
 ## Команды для работы с проектом:
   
   - Dev-сборка проекта: npm run dev

@@ -6,8 +6,6 @@ Object.entries(Components).forEach(([name, template]) => {
   Handlebars.registerPartial(name, template)
 })
 
-console.log(Pages);
-
 const pages = {
   'login': Pages.pageLogin,
   'signin': Pages.pageSignin,

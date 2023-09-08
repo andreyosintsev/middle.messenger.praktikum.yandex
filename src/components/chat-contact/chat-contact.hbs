@@ -13,6 +13,11 @@
         {{name}}
       </div>
       <div class="chat-contact-user-message">
+        {{#if reply}}
+          <div class="chat-contact-user-reply">
+            {{reply}}:
+          </div>
+        {{/if}}
         {{message}}
       </div>
     </div>

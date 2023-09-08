@@ -1,8 +1,16 @@
 @import "../../sass/consts.scss";
 
-.main {
-  display: flex;
-  flex-direction: row;
+.chat-main {
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
 }
 
 .chat-list {
@@ -136,7 +144,11 @@
 }
 
 .chat-menu {
+  width: 20px;
+  height: 20px;
   padding: 0 10px;
+
+  background: url('../../assets/menu.svg') no-repeat center center;
 
   cursor: pointer;
 }

@@ -63,6 +63,13 @@
   text-overflow: ellipsis;
 }
 
+.chat-contact-user-reply {
+  display: inline-block;
+
+  color: $base-font-color;
+  font-weight: bold;
+}
+
 .chat-contact-message-info {
   display: flex;
   flex-direction: column;
