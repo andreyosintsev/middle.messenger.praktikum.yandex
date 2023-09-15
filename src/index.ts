@@ -11,28 +11,26 @@ const pages = {
   'signin': Pages.pageSignin,
   'profile': Pages.pageProfile,
   'chat': Pages.pageChat,
-  '404': Pages.page404,
-  '500': Pages.page500,
+  'page404': Pages.page404,
+  'page500': Pages.page500,
 }
 
-function navigate(page) {
-  const source = pages[page];
+function navigate(page: string): void {
+  const source = (pages as Record<string, string>)[page];
   const render = Handlebars.compile(source);
 
   const appDiv = document.querySelector('#app');
-  if (appDiv) {
-    appDiv.innerHTML = render();
-  }
+  if (appDiv) appDiv.innerHTML = render('');
 }
 
 document.addEventListener('DOMContentLoaded', () => navigate('chat'));
 
 document.addEventListener('click', (e) => {
+  if (!e) return;
+  
   e.preventDefault;
 
-  const page = e.target.getAttribute('page');
+  const page = (e.target as HTMLInputElement).getAttribute('page');
   
-  if (page) {
-    navigate(page);
-  }
+  if (page) navigate(page);
 })
