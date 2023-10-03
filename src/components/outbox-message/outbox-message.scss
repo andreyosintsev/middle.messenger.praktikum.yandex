@@ -1,6 +1,8 @@
 @import "../../sass/consts.scss";
 
-.chat-message {
+.outbox-message {
+  align-self: flex-end;
+  
   max-width: 400px;
   margin-bottom: 10px;
   padding: 11px;
@@ -12,23 +14,15 @@
 
   line-height: 15px;;
   
-  border-radius: 0 10px 10px 10px;
-  background-color: $chat-message-background-color;
-}
-
-.chat-message_right {
-  align-self: flex-end;
-
   border-radius: 10px 10px 0 10px;
-
-  background-color: #E4EDFD;
+  background-color: $outbox-message-background-color;
 }
 
-.chat-message__image {
+.outbox-message__image {
   max-width: 388;
   height: auto;
 }
 
-.chat-message_image {
+.outbox-message_image {
   background-color: $main-background-color;
 }

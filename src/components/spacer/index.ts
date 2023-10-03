@@ -1,2 +1,2 @@
 import './spacer.scss'
-export { default as Spacer } from './spacer.hbs?raw'
+export { Spacer } from './spacer.ts'

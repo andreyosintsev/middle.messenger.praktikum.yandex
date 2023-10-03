@@ -1,0 +1,13 @@
+<div class="inbox-message 
+  {{#if image}}
+    inbox-message_image
+  {{/if}}
+">
+  {{#if content}}
+    {{content}}
+  {{/if}}
+  {{#if image}}
+    <img class="inbox-message__image" src={{image}} alt={{alt}}>
+  {{/if}}
+
+</div>

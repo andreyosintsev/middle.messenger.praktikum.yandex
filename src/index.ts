@@ -1,29 +1,60 @@
 import Handlebars from 'handlebars';
 import * as Components from './components';
 import * as Pages from './pages';
+import { registerComponent } from './utils/registerComponents';
+import { navigation } from './utils/navigation';
 
-Object.entries(Components).forEach(([name, template]) => {
-  Handlebars.registerPartial(name, template)
-})
+// const formAuth = `{{> @partial-block }}`;     // Обертка
+// const page = `<div>                           
+//                  {{#> FormAuth}}
+//                      {{>Spacer height="50" }}
+//                  {{/FormAuth}}
+//                </div>
+//      `;                                       // Страница
 
-const pages = {
-  'login': Pages.pageLogin,
-  'signin': Pages.pageSignin,
-  'profile': Pages.pageProfile,
-  'chat': Pages.pageChat,
-  'page404': Pages.page404,
-  'page500': Pages.page500,
-}
+// const template = `<div class="spacer" style="height: {{height}}px"></div>`;
+// const name = "Spacer"                         // Компонент
 
-function navigate(page: string): void {
-  const source = (pages as Record<string, string>)[page];
-  const render = Handlebars.compile(source);
+//Handlebars.registerPartial('FormAuth', formAuth)
+// Handlebars.registerPartial(name, template)
 
-  const appDiv = document.querySelector('#app');
-  if (appDiv) appDiv.innerHTML = render('');
-}
+// Handlebars.registerHelper(name, function(this: unknown, { hash, data, fn }: HelperOptions) {
+//   console.log('In register Helper');
+//   console.log('hash', hash);
+//   console.log('hash', data);
+//   console.log('fn', fn);
 
-document.addEventListener('DOMContentLoaded', () => navigate('chat'));
+//   const contents = fn ? fn(this) : ''; 
+//   return `<div>${contents}</div>`
+// });
+
+// const html = Handlebars.compile(page)({height: 50});
+// console.log(html);
+
+// const divApp = document.querySelector('#app');
+// if (divApp) divApp.innerHTML = html;
+
+
+// console.log('Register Partials');
+// Object.entries(Components).forEach(([name, template]) => {
+//   console.log(`Partial:`, name);
+//   Handlebars.registerPartial(name, template)
+// })
+
+console.log('Handlebars.helpers');
+console.dir(Handlebars.helpers);
+
+registerComponent('Avatar', Components.Avatar);
+registerComponent('Button', Components.Button);
+registerComponent('ChatContact', Components.ChatContact);
+registerComponent('Dataline', Components.Dataline);
+registerComponent('Datalink', Components.Datalink);
+registerComponent('Field', Components.Field);
+registerComponent('Link', Components.Link);
+registerComponent('Num', Components.Num);
+registerComponent('Spacer', Components.Spacer);
+
+document.addEventListener('DOMContentLoaded', () => navigation('page404'));
 
 document.addEventListener('click', (e) => {
   if (!e) return;
@@ -32,5 +63,5 @@ document.addEventListener('click', (e) => {
 
   const page = (e.target as HTMLInputElement).getAttribute('page');
   
-  if (page) navigate(page);
+  if (page) navigation(page);
 })

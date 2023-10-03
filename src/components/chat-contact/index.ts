@@ -1,2 +1,2 @@
 import './chat-contact.scss'
-export { default as ChatContact } from './chat-contact.hbs?raw'
+export { ChatContact } from './chat-contact.ts'

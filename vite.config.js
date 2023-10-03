@@ -10,7 +10,8 @@ export default defineConfig({
       input: {
         main:     resolve(__dirname, 'src/index.html'),
       }
-    }
+    },
+    sourcemap: 'inline',
   },
   server: {
     port: 3000,

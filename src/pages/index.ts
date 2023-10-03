@@ -1,6 +1,6 @@
-export { pageLogin } from './login/';
-export { pageSignin } from './signin/';
-export { pageProfile } from './profile/';
-export { pageChat } from './chat/';
-export { page404 } from './404/';
-export { page500 } from './500/';
+export { PageLogin } from './login/';
+export { PageSignin } from './signin/';
+export { PageProfile } from './profile/';
+export { PageChat } from './chat/';
+export { Page404 } from './404/';
+export { Page500 } from './500/';

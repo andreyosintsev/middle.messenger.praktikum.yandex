@@ -13,4 +13,4 @@ const messages = [
   }
 ]
 
-export { default as pageChat } from './chat.hbs?raw'
+export { PageChat } from './chat.ts'

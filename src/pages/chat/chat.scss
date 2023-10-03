@@ -1,6 +1,7 @@
 @import "../../sass/consts.scss";
 
 .chat-main {
+  display: flex;
   position: fixed;
   box-sizing: border-box;
   width: 100%;
@@ -205,6 +206,10 @@
   background: url(../../assets/clip.svg) center center no-repeat;
 
   cursor: pointer;
+}
+
+.chat-footer__form {
+  width: 100%;
 }
 
 .chat-footer__text {

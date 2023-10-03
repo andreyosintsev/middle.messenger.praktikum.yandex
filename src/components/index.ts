@@ -6,5 +6,6 @@ export { Field }    from './field';
 export { Link }     from './link';
 export { Spacer }   from './spacer';
 export { ChatContact }   from './chat-contact';
-export { ChatMessage }   from './chat-message';
+export { InboxMessage }   from './inbox-message';
+export { OutboxMessage }   from './outbox-message';
 export { Num }   from './num';
