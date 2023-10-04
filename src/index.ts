@@ -47,6 +47,7 @@ console.dir(Handlebars.helpers);
 registerComponent('Avatar', Components.Avatar);
 registerComponent('Button', Components.Button);
 registerComponent('ChatContact', Components.ChatContact);
+registerComponent('ChatMessage', Components.ChatMessage);
 registerComponent('Dataline', Components.Dataline);
 registerComponent('Datalink', Components.Datalink);
 registerComponent('Field', Components.Field);
@@ -54,7 +55,7 @@ registerComponent('Link', Components.Link);
 registerComponent('Num', Components.Num);
 registerComponent('Spacer', Components.Spacer);
 
-document.addEventListener('DOMContentLoaded', () => navigation('page404'));
+document.addEventListener('DOMContentLoaded', () => navigation('chat'));
 
 document.addEventListener('click', (e) => {
   if (!e) return;

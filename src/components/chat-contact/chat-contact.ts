@@ -14,12 +14,9 @@ export class ChatContact extends Block {
     super(props);
   }
 
-  private _hasReply() { return this.props.reply ? true : false };
+  private _hasReply() { return !!this.props.reply };
 
-  private _hasNum() { 
-    console.log('num', this.props.num);
-    return this.props.num && this.props.num > 0 ? true : false
-  };
+  private _hasNum() { return !!(this.props.num && this.props.num > 0) };
 
   protected render(): string {
     const { current, name, reply, message, time, num } = this.props;

@@ -1,5 +1,7 @@
 import * as Pages from '../pages';
 
+import { MockContacts, MockMessages } from '../mocks';
+
 const pages = {
   'login': Pages.PageLogin,
   'signin': Pages.PageSignin,
@@ -14,13 +16,22 @@ export function navigation(page: string) {
   if (!appDiv) return;
 
   appDiv.innerHTML = '';
+  
+  //@ts-ignore
+  const component = pages[page];
+  let component_compiled;
+
+  if (page === 'chat') {
+    component_compiled = new component({
+      contactList: MockContacts,
+      messageList: MockMessages}
+    );
+  } else {
+    component_compiled = new component();
+  }
 
   //@ts-ignore
-  const Component = pages[page];
-  console.log('page');
-  console.log(page);
-  console.log('Component = pages[page]');
-  console.log(Component);
-  const component = new Component;
-  appDiv.append(component.getContent());
+    console.log('component_compiled');
+    console.log(component_compiled);
+    appDiv.append(component_compiled.getContent());
 }

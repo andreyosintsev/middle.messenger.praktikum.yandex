@@ -124,8 +124,6 @@ export default class Block {
 
   private _render() {
     const fragment = this._compile(this.render(), this.props);
-    console.log(`fragment`);
-    console.log(fragment);
 
     const newElement = fragment.firstElementChild as HTMLElement;
     

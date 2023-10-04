@@ -1,0 +1,42 @@
+@import "../../sass/consts.scss";
+
+.chat-message {
+  max-width: 400px;
+  margin-bottom: 10px;
+  padding: 11px;
+
+  font-size: 12px;
+  color: $chat-message-font-color;
+
+  text-align: left;
+  line-height: 15px;
+
+  border: 1px solid $navigation-background-color;
+}
+
+.chat-message_inbox {
+  border-radius: 0 10px 10px 10px;
+  background-color: $inbox-message-background-color;
+}
+
+.chat-message_outbox {
+  align-self: flex-end;
+
+  border-radius: 10px 10px 0 10px;
+  background-color: $outbox-message-background-color;
+}
+
+.chat-message_image {
+  padding: 0;
+  background-color: $main-background-color;
+
+  border: none;
+}
+
+.chat-message__image {
+  max-width: 388px;
+  height: auto;
+
+  border: 1px solid $navigation-border-color;
+  border-radius: 10px;
+}
